@@ -1,0 +1,1 @@
+This C++ program prompts the user to enter their full name (first and last) and extracts the first and last names from the input. It handles basic input and checks for the presence of a last name. If both names are provided, the program displays them; otherwise, it prints an error message.
