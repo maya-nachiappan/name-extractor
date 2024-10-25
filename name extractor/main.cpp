@@ -10,7 +10,7 @@
 int main() {
     std::string fullName;
 
-    std::cout << "Enter your full name (first and last): "; // gets full name from user in string
+    std::cout << "Enter your full name (first and last names): "; // gets full name from user in string
     
     std::getline(std::cin, fullName);
 
