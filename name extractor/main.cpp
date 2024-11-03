@@ -6,23 +6,21 @@
 //
 #include <iostream>
 #include <string>
+#include "getName.hpp"
 
 int main() {
     std::string fullName;
+    std::string firstName;
+    std::string lastName;
 
-    std::cout << "Enter your full name (first and last names): "; // gets full name from user in string
-    
+    std::cout << "Enter your full name (first and last names): ";
     std::getline(std::cin, fullName);
 
-    size_t spacePos = fullName.find(' '); // checks for spaces in string
+    getName(fullName, firstName, lastName);
 
-    if (spacePos != std::string::npos) {
-        std::string firstName = fullName.substr(0, spacePos); // extracts name before space
-        
-        std::string lastName = fullName.substr(spacePos + 1); // extracts name after space
-
-        std::cout << "First Name: " << firstName << std::endl; // prints first name
-        std::cout << "Last Name: " << lastName << std::endl; // prints last name
+    if (!firstName.empty() && !lastName.empty()) {
+        std::cout << "First Name: " << firstName << std::endl;
+        std::cout << "Last Name: " << lastName << std::endl;
     } else {
         std::cout << "No last name found." << std::endl;
     }
